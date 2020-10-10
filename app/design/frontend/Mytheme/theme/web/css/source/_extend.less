@@ -1,0 +1,37 @@
+@import (reference) "../source/lib/variables/_responsive.less";
+@import (reference) "../source/lib/_responsive.less";
+
+/*For override element from  style-m.css*/
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m)
+{
+	
+}
+
+
+/*For override element from  style-l.css*/
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) 
+{
+
+	.block-search
+	{
+		float: left;	
+	}
+}
+
+
+/*For override commom element*/
+
+& when (@media-common = true) 
+{
+	.logo
+    {
+        float: right;
+    } 
+    .minicart-wrapper
+    {
+    	float: left;
+    }
+
+}
+
+
